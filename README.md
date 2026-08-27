@@ -8,7 +8,7 @@ The notebook walks through a full applied deep learning workflow:
 
 1. **Data acquisition** — downloads the [Grapevine Disease Dataset (Original)](https://www.kaggle.com/datasets/rm1000/grape-disease-dataset-original) from Kaggle (9,027 images across 4 classes) and inspects the extracted folder structure.
 2. **Exploratory Data Analysis (EDA)** — builds a DataFrame of image paths and labels, prints class distribution counts, visualizes class balance with a bar chart and pie chart, displays sample images from each class, and analyzes image width/height distributions to inform the model input size.
-3. **Data splitting & augmentation** — uses `ImageDataGenerator` to split the data into 70% training / 15% validation / 15% test, with augmentation (rotation, shifts, flips, zoom, brightness) applied to the training set only, and visualizes a sample of augmented images to verify the pipeline.
+3. **Data splitting & augmentation** — uses `ImageDataGenerator` to split the data into 70% training / 30% validation with augmentation (rotation, shifts, flips, zoom, brightness) applied to the training set only, and visualizes a sample of augmented images to verify the pipeline.
 4. **Modeling**
    - A custom baseline CNN (four convolutional blocks with batch normalization, max pooling, and fully connected layers).
    - Transfer learning with frozen pretrained backbones: **MobileNetV2**, **VGG16**, **EfficientNetB0**, and **ResNet50**, each with a custom classification head.
